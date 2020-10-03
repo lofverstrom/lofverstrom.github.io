@@ -1,12 +1,6 @@
 <!DOCTYPE HTML>
-<!--
-	Spatial by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
 <html>
 	<head>
-		<!-- Google Analytics -->
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-75496748-3"></script>
 		<script>
@@ -18,10 +12,20 @@
 		</script>
 		<!-- End Google Analytics -->
 
-                <title>Publications - Marcus Lofverstrom</title>
+    <title>Contact - Marcus Lofverstrom</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+
+
+		<style>
+	 	/* Set the size of the div element that contains the map */
+		#map {
+		height: 400px;  /* The height is 400 pixels */
+		width: 100%;  /* The width is the width of the web page */
+	 	}
+		</style>
+
 	</head>
 
 	<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
@@ -52,51 +56,75 @@
 						<!-- <p>Sub title</p> -->
 					</header>
 
+
 					<!-- Lists -->
 						<section>
-							<!-- <h3>Lists</h3> -->
-							<div class="row">
-								<div class="6u 12u$(xsmall)">
+							<div class="row 100%">
 
+									<div class="-1u 12u$(medium)">
+									<h4>Contact information</h4>
+
+									Dr. Marcus Lofverstrom <br>
+									lofverstrom at arizona dot edu <br>
+									1040 E 4th Street, Tucson, AZ, 85721, USA
+								</div>
+
+
+								<div class="-4u 12u$(medium)">
 									<h4>Links</h4>
 									<ul>
 										<li><a href="https://www.arizona.edu/" target="_blank" style="color:#080808";>
 	 											University of Arizona</a></li>
 										<li><a href="https://www.geo.arizona.edu/" target="_blank" style="color:#080808";>
 											 Department of Geosciences</a></li>
-										<li><a href="https://www.google.com/maps/place/1040+E+4th+St,+Tucson,+AZ+85719/data=!4m2!3m1!1s0x86d671013e372289:0x884bd79e43560f3f?sa=X&ved=2ahUKEwi9h7fI-ofsAhW_IDQIHZjbB0gQ8gEwAHoECAsQAQ" target="_blank"
+										 <!-- <li><a href="https://www.google.com/maps/place/1040+E+4th+St,+Tucson,+AZ+85719/
+												data=!4m2!3m1!1s0x86d671013e372289:0x884bd79e43560f3f?sa=X&ved=2ahUKEwi9h7fI-ofsAhW_IDQIHZjbB0gQ8gEwAHoECAsQAQ" target="_blank"
 										   style="color:#080808";>
-											 Google Maps</a></li>
+											 Google Maps</a></li> -->
 									</ul>
-
 								</div>
 
+							</div>
+							<br> <br>
 
-								<div class="6u$ 12u$(xsmall)">
+							<!--The div element for the map -->
+					    <div id="map"></div>
+					    <script>
+							// Initialize and add the map
+							function initMap() {
+					  	// The location of Uluru
+					  	var location = {lat: 32.229805, lng: -110.9572121};
+					  	// The map, centered at Uluru
+					  	var map = new google.maps.Map(
+					      	document.getElementById('map'), {zoom: 15, center: location});
+					  	// The marker, positioned at Uluru
+					  	var marker = new google.maps.Marker({position: location, map: map});
+							}
+					    </script>
+					    <!--Load the API from the specified URL
+					    * The async attribute allows the browser to render the page while the API loads
+					    * The key parameter will contain your own API key (which is not needed for this tutorial)
+					    * The callback parameter executes the initMap() function
+					    -->
+					    <script defer
+					    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCb1VYKb7m_D0pQ60xFu-cgN9j7oe00wzE&callback=initMap">
+					    </script>
 
-									<h4>Contact information</h4>
-									Dr. Marcus Lofverstrom <br>
-									lofverstrom at arizona dot edu <br>
-									1040 E 4th Street, Tucson, AZ, 85721, USA <br>
+							<br><br><br>
 
-									<!--
+							<!--
+							<div class="row">
+								<div class="12u 12u$(xsmall)">
 									<h4>Links</h4>
-									<ul class="alt">
-										<li><a href="https://www.arizona.edu/" target="_blank"
-											style="color:#080808";>
-	 										University of Arizona</a></li>
+									<ul>
+										<li><a href="https://www.arizona.edu/" target="_blank" style="color:#080808";>
+	 											University of Arizona</a></li>
 										<li><a href="https://www.geo.arizona.edu/" target="_blank" style="color:#080808";>
-											Department of Geosciences</a></li>
-										<li><a href="https://www.google.com/maps/place/1040+E+4th+St,+Tucson,+AZ+85719/data=!4m2!3m1!1s0x86d671013e372289:0x884bd79e43560f3f?sa=X&ved=2ahUKEwi9h7fI-ofsAhW_IDQIHZjbB0gQ8gEwAHoECAsQAQ" target="_blank"
-											style="color:#080808";>
-											Google Maps</a></li>
+											 Department of Geosciences</a></li>
 									</ul>
-									-->
-
 								</div>
 							</div>
-
-
+						-->
 
 							<!-- Footer -->
 							<section id="two" class="wrapper style1">
